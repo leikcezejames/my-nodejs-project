@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/image/logos.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/project">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-4" style="background-color: rgba(255, 255, 255, 0.1);">
+        <h3 class="mb-4">Project Samples</h3>
+        <div class="row">
+            <!-- Photo 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/image/project1.png" class="card-img-top" alt="Photo 1" onclick="showImageModal(this)">
+                    <div class="card-body">
+                        <h5 class="card-title">Chat App using socket.io</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Photo 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/image/project2.png" class="card-img-top" alt="Photo 2" onclick="showImageModal(this)">
+                    <div class="card-body">
+                        <h5 class="card-title">QR Code Generator Service</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Photo 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/image/project3.png" class="card-img-top" alt="Photo 3" onclick="showImageModal(this)">
+                    <div class="card-body">
+                        <h5 class="card-title">User Management System</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Photo 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/image/project4.png" class="card-img-top" alt="Photo 4" onclick="showImageModal(this)">
+                    <div class="card-body">
+                        <h5 class="card-title">Login Authentication</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Photo 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/image/project5.png" class="card-img-top" alt="Photo 5" onclick="showImageModal(this)">
+                    <div class="card-body">
+                        <h5 class="card-title">Sports Score Tracker</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Photo 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/image/project6.png" class="card-img-top" alt="Photo 6" onclick="showImageModal(this)">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Whatsapp Bot</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Project Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Full Image">
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="text-center mt-4 bg-light">
+    <p>&copy; Developed by Ezeckiel James Genteroy</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showImageModal(img) {
+        var modalImage = document.getElementById("modalImage");
+        modalImage.src = img.src;
+        var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+        imageModal.show();
+    }
+</script>
+</body>
+</html>
